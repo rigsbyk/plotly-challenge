@@ -8,7 +8,6 @@
         d3.json("samples.json").then((data) =>{
             var mainData = data.metadata;
             console.log(mainData);
-
             // Select each data point from the the object mainData aka sample id
             var SampleList = mainData.filter(sampleObj => sampleObj.id == sample);
             // as a defaul sample, let's use the first from the list
@@ -86,6 +85,11 @@
     
             Plotly.newPlot("bar", barData, barLayout);
     
+    
+    
+        
+    
+    
         });
     
     }
@@ -126,4 +130,4 @@
     
     
     
-    init();
+     init();
