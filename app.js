@@ -1,3 +1,7 @@
+// Found a gauge chart that was very similar to the one in this
+// homework and built off it
+// URL: https://jsfiddle.net/b98tj88j/3/ 
+
 // Create 4 functions
     // * Function 1: Bring the metadata data over
     // * Function 2: Build the charts
