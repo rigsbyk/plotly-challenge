@@ -1,7 +1,12 @@
+// Found a gauge chart that was very similar to the one in this
+// homework and built off it
+// URL: https://jsfiddle.net/b98tj88j/3/ 
+
+
 function buildGauge(wfreq) {
-    d3.json("samples.json").then((data) => {
-        var freqv = parseFloat(data.wfreq);
-        var level = freqv * (180/9)
+    
+        var level = parseFloat(wfreq) * 20;
+        
          
         // Trig to calc meter point
          var degrees = 180 - level;
@@ -11,7 +16,7 @@ function buildGauge(wfreq) {
          var y = radius * Math.sin(radians);
 
          // Path: may have to change to create a better triangle
-         var mainPath = "M -.0 -0.05 L .0 0.25 L ";
+         var mainPath = "M -.0 -0.05 L .0 0.05 L ";
          pathX = String(x);
          space = " ";
          pathY = String(y);
@@ -85,6 +90,7 @@ function buildGauge(wfreq) {
                  range:[-1,1]
              }
              };
-             Plotly.newPlot("gauge",gdata,glayout);
-                     });
+             var GaugeElement = document.getElementById("gauge")
+             Plotly.newPlot(GaugeElement,gdata,glayout);
+                    
                  }
